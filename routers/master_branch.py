@@ -50,7 +50,7 @@ def update_branch(id: int, request: UpdateBranchSchema, db: Session = Depends(ge
         raise HTTPException(status_code=404, detail="Branch not found")
 
     # Update branch fields with request data
-    branch.branch_code = request.branch_code
+    branch.branch_code = request.branch_code   
     branch.branch_name = request.branch_name
     branch.city_id = request.city_id
     branch.state_id = request.state_id
